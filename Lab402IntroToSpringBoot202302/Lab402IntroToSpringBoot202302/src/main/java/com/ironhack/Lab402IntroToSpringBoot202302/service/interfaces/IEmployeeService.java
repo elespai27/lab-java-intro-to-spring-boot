@@ -2,6 +2,7 @@ package com.ironhack.Lab402IntroToSpringBoot202302.service.interfaces;
 
 
 import com.ironhack.Lab402IntroToSpringBoot202302.model.Employee;
+import com.ironhack.Lab402IntroToSpringBoot202302.model.EmployeeStatus;
 import jakarta.validation.constraints.NotEmpty;
 
 import java.util.List;
@@ -17,4 +18,10 @@ public interface IEmployeeService {
 
     List<Employee> getAllEmployee();
 
+    Employee getEmployeeById(Long id);
+
+
+    List<Employee> findEmployeeByStatus(EmployeeStatus status);
+
+    List<Employee> findEmployeeByDepartment(String department);
 }
